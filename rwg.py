@@ -4,8 +4,8 @@ import random
 times = int(input("how many words? "))
 isadj = bool(int(input("should have adjectives? ")))
 
-nouns = "/home/nixo/Public/RWG/nouns.txt"
-adjectives = "/home/nixo/Public/RWG/adjectives.txt"
+nouns = "nouns.txt"
+adjectives = "adjectives.txt"
 
 def get_rand_line ( txt ):
     with open(txt) as f:
@@ -14,7 +14,7 @@ def get_rand_line ( txt ):
         var = var[:-1]
     return var
 
-print("")
+print()
 for i in range(0, times):
     word = ""
     word = get_rand_line(nouns)
@@ -22,5 +22,5 @@ for i in range(0, times):
         adj = get_rand_line(adjectives)
         word = adj + " " + word
     print ( word )
-print("")
+print()
 
